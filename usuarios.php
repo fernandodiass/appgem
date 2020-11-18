@@ -35,7 +35,7 @@
     {
         protected function DoBeforeCreate()
         {
-            $this->SetTitle('Controle de Usuários');
+            $this->SetTitle('Lista de Usuários');
             $this->SetMenuLabel('Usuarios');
     
             $this->dataset = new TableDataset(
@@ -601,6 +601,7 @@
             $this->AddMultiUploadColumn($result);
     
     
+            $this->SetInsertFormTitle('GEM - Gerenciador de Exames Médicos');
             $this->SetShowPageList(true);
             $this->SetShowTopPageNavigator(true);
             $this->SetShowBottomPageNavigator(true);

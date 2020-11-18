@@ -53,27 +53,28 @@ function GetHomePageBanner()
 function GetPageGroups()
 {
     $result = array();
-    $result[] = array('caption' => 'Default', 'description' => 'Sistema gerenciador de exames médicos.');
+    $result[] = array('caption' => 'Default', 'description' => '');
     return $result;
 }
 
 function GetPageInfos()
 {
     $result = array();
-    $result[] = array('caption' => 'Usuarios', 'short_caption' => 'Controle de Usuários', 'filename' => 'usuarios.php', 'name' => 'usuarios', 'group_name' => 'Default', 'add_separator' => true, 'description' => 'Sistema gerenciador de exames médicos.');
+    $result[] = array('caption' => 'Exames', 'short_caption' => 'Lista de Exames', 'filename' => 'exames.php', 'name' => 'exames', 'group_name' => 'Default', 'add_separator' => false, 'description' => 'GEM - Gerenciador de Exames Médicos');
+    $result[] = array('caption' => 'Usuarios', 'short_caption' => 'Lista de Usuários', 'filename' => 'usuarios.php', 'name' => 'usuarios', 'group_name' => 'Default', 'add_separator' => true, 'description' => 'GEM - Gerenciador de Exames Médicos');
     return $result;
 }
 
 function GetPagesHeader()
 {
     return
-        '<nav class="navbar navbar-light bg-light"><a class="navbar-brand"><img src="components/assets/img/logo-color.svg" width="100" height="auto" alt=""></a></nav>';
+        '<div class="alert alert-danger SQLGeneratorEvaluationVersion"><h3 class="SQLGeneratorEvaluationVersion-head">This website was created by evaluation version of <a href="http://www.sqlmaestro.com/products/mysql/phpgenerator/" class="alert-link">PHP Generator for MySQL Professional</a>.</h3><img class="SQLGeneratorEvaluationVersion-justify" src="components/assets/img/btn-loading.png"></div>';
 }
 
 function GetPagesFooter()
 {
     return
-        '<p align="center"><span><script type="text/javascript">document.write(new Date().getFullYear().toString())</script></span><a href="http://www.fernandodiass.com.br"> Fernando Dias</a>.</p>';
+        '<p align="right">(C) <span>2002-<script type="text/javascript">document.write(new Date().getFullYear().toString())</script></span><a href="http://www.sqlmaestro.com/products/mysql/phpgenerator/"> SQL Maestro Group</a>.</p>';
 }
 
 function ApplyCommonPageSettings(Page $page, Grid $grid)
@@ -155,7 +156,7 @@ function Global_AfterDeleteHandler($page, $rowData, $tableName, &$success, &$mes
 
 function GetDefaultDateFormat()
 {
-    return 'd-m-Y';
+    return 'Y-m-d';
 }
 
 function GetFirstDayOfWeek()

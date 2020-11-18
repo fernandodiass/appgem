@@ -17,23 +17,23 @@ $grants = array('guest' =>
         array('exames' => new PermissionSet(false, false, false, false),
         'usuarios' => new PermissionSet(false, false, false, false))
     ,
+    'fernando@appgem.com.br' => 
+        array('exames' => new AdminPermissionSet(),
+        'usuarios' => new AdminPermissionSet())
+    ,
     'heberson@appgem.com.br' => 
         array('exames' => new AdminPermissionSet(),
         'usuarios' => new PermissionSet(false, false, false, false))
     ,
-    'fernando@appgem.com.br' => 
-        array('exames' => new PermissionSet(false, false, false, false),
-        'usuarios' => new AdminPermissionSet())
-    ,
     'teste@appgem.com.br' => 
-        array('exames' => new AdminPermissionSet(),
+        array('exames' => new PermissionSet(true, false, true, false),
         'usuarios' => new PermissionSet(false, false, false, false))
     );
 
 $appGrants = array('guest' => new PermissionSet(false, false, false, false),
     'defaultUser' => new PermissionSet(false, false, false, false),
-    'heberson@appgem.com.br' => new PermissionSet(false, false, false, false),
     'fernando@appgem.com.br' => new AdminPermissionSet(),
+    'heberson@appgem.com.br' => new PermissionSet(false, false, false, false),
     'teste@appgem.com.br' => new PermissionSet(false, false, false, false));
 
 $dataSourceRecordPermissions = array();
